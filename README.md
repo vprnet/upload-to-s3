@@ -24,7 +24,7 @@ This repository contains the module we use to upload conent to s3.
 
 4. Make `build/` directory, place content needing to be uploaded within
 
-5. Run script, everything within build will have metadata set and get gzipped before it gets uploaded
+5. Run script, everything within `build/` will have metadata set and get gzipped before it gets uploaded
 
 
         $ python upload_s3.py
