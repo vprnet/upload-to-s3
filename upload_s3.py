@@ -90,7 +90,7 @@ def set_metadata():
     conn = S3Connection(AWS_KEY, AWS_SECRET_KEY)
     mybucket = conn.get_bucket(AWS_BUCKET)
     expires = time.time() + STATIC_EXPIRES
-    expires_header = time.strftime("%a, %d-%b-%Y %T GMT", time.gmtime(expires))
+    expires_header = time.strftime("%a, %d-%b-%Y %H:%M:%S GMT", time.gmtime(expires))
 
     for filename in s3_list:
         k = Key(mybucket)
